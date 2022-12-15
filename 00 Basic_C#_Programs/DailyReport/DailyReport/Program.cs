@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DailyReport
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Start-up text
             Console.WriteLine("The Tech Academy\nStudent Daily Report\n");
@@ -53,12 +49,6 @@ namespace DailyReport
             // Final response.
             Console.WriteLine("Thank you for your answers. An Instructor will respond to this shortly. Have a great day!");
             Console.ReadLine();
-
-
-
-
-
-
         }
     }
 }
