@@ -6,23 +6,24 @@ namespace WhileAssignment
     {
         static void Main()
         {
-            // while loop, count from 0 to 4
-            int count = 0;
-            while (count <= 5) // loop while count is less than or equal to 5
+            // boolean comparison using while
+            bool check = true; // the bool is true
+            do // do-while
             {
-                Console.WriteLine(count);
-                count++; // +1 to count every loop
+                Console.WriteLine("Is the check true or false?");
+                bool answer = Convert.ToBoolean(Console.ReadLine()); // answer becomes a new bool to compare
+                if (answer == check) // compare bool to bool, if they are equal...
+                {
+                    Console.WriteLine("The check is true!");
+                    Console.ReadLine();
+                    break;
+                }
+                else // otherwise, try again
+                {
+                    Console.WriteLine("The check is not true. Try again.");
+                }
             }
-
-            // do-while loop, countdown from 10 to 0
-            int countdown = 10;
-            do
-            {
-                Console.WriteLine(countdown);
-                countdown--; // -1 to countdown every loop
-            }
-            while (countdown >= 0); // loop while countdown is greater than or equal to 0
-            Console.Read();
+            while (check); // while check = true
         }
     }
 }
