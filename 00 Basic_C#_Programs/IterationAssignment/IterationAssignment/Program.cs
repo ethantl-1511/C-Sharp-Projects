@@ -72,7 +72,7 @@ namespace IterationAssignment
             {
                 Console.WriteLine("Your input is not on the list.");
             }
-            Console.ReadLine();
+            Console.ReadLine(); // Press Enter to continue
 
 
             // Part Five, literally the same as before, just remove the break.
@@ -94,35 +94,35 @@ namespace IterationAssignment
             {
                 Console.WriteLine("Your input is not on the list.");
             }
-            Console.ReadLine();
+            Console.ReadLine(); // Press Enter to continue
 
 
             // Part Six
             List<string> originalLetters = new List<string> { "A", "B", "C", "D", "C" }; // original list
             List<string> uniqueLetters = new List<string> { }; // list for tracking found letters
 
-            foreach (string original in originalLetters)
+            foreach (string original in originalLetters) // iterate through original list
             {
-                bool found3 = false;
-                foreach (string unique in uniqueLetters)
+                bool found3 = false; // found is false, we must find it
+                foreach (string unique in uniqueLetters) // iterate through unique list
                 {
-                    if (original == unique)
+                    if (original == unique) // if the original letter is equal to the unique letter
                     {
-                        found3 = true;
+                        found3 = true; // found is true
                         break;
                     }
                 }
-                if (found3 == true)
+                if (found3 == true) // if found is now true,
                 {
-                    Console.WriteLine(original + " - this item is a duplicate");
+                    Console.WriteLine(original + " - this item is a duplicate"); // true means item is a duplicate
                 }
                 else
                 {
-                    Console.WriteLine(original + " - this item is unique");
-                    uniqueLetters.Add(original);
+                    Console.WriteLine(original + " - this item is unique"); // false means item is unique
+                    uniqueLetters.Add(original); // add original letter to unique list
                 }
             }
-            Console.ReadLine();
+            Console.ReadLine(); // Press Enter to continue
         }
     }
 }
