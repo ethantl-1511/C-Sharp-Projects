@@ -9,6 +9,7 @@ namespace IterationAssignment
         static void Main(string[] args)
         {
             // Part One
+            Console.WriteLine("Part One");
             string[] array1 = { "One", "The", "Loop", "Create", "And" }; // A one-dimensional array of strings
             Console.WriteLine("Hello. Type something to be added to a array of strings: "); // Ask the user to input some text. 
             string text = Console.ReadLine();
@@ -27,6 +28,7 @@ namespace IterationAssignment
 
 
             // Part Two
+            Console.WriteLine("Part Two");
             int infiniteLoop = 0;
             // while (infiniteLoop >= 0) // this creates an infinite loop, it will keep adding 1 to infiniteLoop as it is ALWAYS greater than or equal to 0.
             while (infiniteLoop <= 10) // this fixes an infinite loop, as it will be forced to stop looping once it hits 10.
@@ -38,6 +40,7 @@ namespace IterationAssignment
 
 
             // Part Three, which is basically Part Two
+            Console.WriteLine("Part Three");
             int x = 0;
             int y = 0;
             while (x < 10)
@@ -45,6 +48,7 @@ namespace IterationAssignment
                 Console.WriteLine(x); // Will spit out numbers 0-9
                 x++;
             }
+            Console.WriteLine();
             while (y <= 10)
             {
                 Console.WriteLine(y); // Will spit out numbers 0-10
@@ -54,6 +58,7 @@ namespace IterationAssignment
 
 
             // Part Four
+            Console.WriteLine("Part Four");
             string[] array2 = { "list", "the", "loop", "code", "and" }; // A list of strings where each item in the list is unique. 
             Console.WriteLine("Input a word to search for in the array list: "); // Ask the user to input text to search for in the list. 
             string search = Console.ReadLine();
@@ -63,7 +68,7 @@ namespace IterationAssignment
             {
                 if (array2[j].EndsWith(search) == true)
                 {
-                    Console.WriteLine("Input \"" + search + "\" found!"); //  -displays the index of the list item that contains matching text on the screen.
+                    Console.WriteLine("\"" + search + "\" was found at index [" + Array.IndexOf(array2, search) + "]"); //  -displays the index of the list item that contains matching text on the screen.
                     found = true;
                     break; // Add code that stops the loop from executing once a match has been found.
                 }
@@ -75,7 +80,8 @@ namespace IterationAssignment
             Console.ReadLine(); // Press Enter to continue
 
 
-            // Part Five, literally the same as before, just remove the break.
+            // Part Five, essentially Part Four just remove break and add iteration value to IndexOf
+            Console.WriteLine("Part Five");
             string[] array3 = { "list", "the", "loop", "code", "list" }; // A list of strings that has at least two identical strings in the list.
             Console.WriteLine("Input a word to search for in the array list: "); // Ask the user to input text to search for in the list. 
             string search2 = Console.ReadLine();
@@ -86,7 +92,7 @@ namespace IterationAssignment
             {
                 if (array3[k].EndsWith(search2) == true)
                 {
-                    Console.WriteLine("Input \"" + search2 + "\" found!");
+                    Console.WriteLine("\"" + search2 + "\" was found at index [" + Array.IndexOf(array3, search2, k) + "]");
                     found2 = true;
                 }
             }
@@ -98,6 +104,7 @@ namespace IterationAssignment
 
 
             // Part Six
+            Console.WriteLine("Part Six");
             List<string> originalLetters = new List<string> { "A", "B", "C", "D", "C" }; // original list
             List<string> uniqueLetters = new List<string> { }; // list for tracking found letters
 
