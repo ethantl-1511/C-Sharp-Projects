@@ -14,14 +14,21 @@ namespace MainMethodAssignment
             int AddResult = SimpleMath.Add(num); // instantiate the class and call the one method
             Console.WriteLine("10 + 100: " + AddResult); // display results
 
-            double dnum = 1.14515627;
-            double DoubleResult = SimpleMath.Add(dnum); // instantiate the class and call the one method
-            Console.WriteLine("1.14515627 + 100.25: " + DoubleResult); // display results
+            decimal decimalNum = 1.14515627m; 
+            int decimalResult = SimpleMath.Add(decimalNum); // instantiate the class and call the one method
+            Console.WriteLine("1.14515627 + 100.25: " + decimalResult); // display results
 
-            Console.WriteLine("Give a number to do another math operation on:");
-            uint unum = Convert.ToUInt32(Console.ReadLine());
-            uint uAddResult = SimpleMath.Add(unum);  // instantiate the class and call the one method
-            Console.WriteLine("Your number + 100: " + uAddResult); // display results
+            try
+            {
+                Console.WriteLine("Give a number to do another math operation on:");
+                string stringNum = Console.ReadLine(); // string variable
+                int sAddResult = SimpleMath.Add(stringNum);  // instantiate the class and call the one method, set to int variable
+                Console.WriteLine("Your number + 100: " + sAddResult); // display results
+            }
+            catch (FormatException ex) // just in case the input is not a number
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.ReadLine();
         } 
@@ -35,14 +42,14 @@ namespace MainMethodAssignment
             return (num + 100);
         }
 
-        public static double Add(double dnum) // add a second method, same name, takes a decimal
+        public static int Add(decimal dnum) // add a second method, same name, takes a decimal, returns an int
         {
-            return (dnum + 100.25);
+            return (Convert.ToInt32(dnum) + 100); // convert dnum, add, return
         }
 
-        public static uint Add(uint unum) // create a third method, same name
-        {
-            return (unum + 100);
+        public static int Add(string snum) // create a third method, same name, takes a string, returns an int
+        {;
+            return (Convert.ToInt32(snum) + 100); // convert snum, add, return
         }
     }
 }
