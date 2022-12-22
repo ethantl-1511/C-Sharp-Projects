@@ -8,9 +8,15 @@ namespace TwentyOne
 {
     public class TwentyOneGame : Game // this public class TwentyOneGame inherents from class Game
     {
-        public void Play()
+        public override void Play()
         {
             throw new NotImplementedException();
+        }
+
+        public override void ListPlayers()
+        {
+            Console.WriteLine("21 Players:");
+            base.ListPlayers();
         }
     }
 }
