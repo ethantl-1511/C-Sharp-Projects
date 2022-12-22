@@ -19,7 +19,8 @@ namespace ClassAssignment
 
             // output parameter call
             int outputData;
-            FirstClass.cAssignment(out outputData);
+            Object.cAssignment(out outputData);
+
             Console.WriteLine("Output data: " + outputData); // print the data
 
             SecondClass.StaticMethod(""); // static class call.
