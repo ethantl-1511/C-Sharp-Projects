@@ -19,7 +19,6 @@ namespace OperatorsAssignment
 
         public static bool operator!= (Employee employee1, Employee employee2)
         {
-
             return !employee1.ID.Equals(employee2.ID);
         }
     }

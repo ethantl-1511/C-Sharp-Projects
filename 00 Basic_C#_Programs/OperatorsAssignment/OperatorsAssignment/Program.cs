@@ -24,8 +24,8 @@ namespace OperatorsAssignment
             Individual2.LastName = "Pro";
 
             // compare the objects using the overloaded operators, display results
-            Console.WriteLine("Is Individual 1's ID == to Individual 2's? " + (Individual1.ID == Individual2.ID)); // Should return False
-            Console.WriteLine("Is Individual 1's ID != to Individual 2's? " + (Individual1.ID != Individual2.ID)); // Should return True
+            Console.WriteLine("Is Individual 1's ID == to Individual 2's ID? " + (Individual1 == Individual2)); // Should return False
+            Console.WriteLine("Is Individual 1's ID != to Individual 2's ID? " + (Individual1 != Individual2)); // Should return True
 
             Console.ReadLine();
         }
