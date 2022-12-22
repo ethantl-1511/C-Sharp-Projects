@@ -11,6 +11,14 @@ namespace TwentyOne
         // Main function
         static void Main(string[] args)
         {
+            //Card card = new Card() { Face = "King", Suit = "Spades"}; // initializes the object with some values
+
+            //TwentyOneGame game = new TwentyOneGame(); // inheritence example
+            //game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
+            //game.ListPlayers();
+            //game.Play();
+            //Console.ReadLine();
+
             Deck deck = new Deck(); // deck object
             deck.Shuffle(3);
 
