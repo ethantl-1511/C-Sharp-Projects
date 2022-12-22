@@ -12,7 +12,9 @@ namespace ClassAssignment
         {
             Console.WriteLine("Please input a number.");
             int number = Convert.ToInt32(Console.ReadLine());
-            FirstClass.cAssignment(number); // instantiate class/call method on number
+
+            FirstClass Object = new FirstClass(); // instantiate class/call method on number
+            Object.cAssignment(number);
 
 
             // output parameter call
