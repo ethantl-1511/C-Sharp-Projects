@@ -15,13 +15,12 @@ namespace TwentyOne
             Deck deck = new Deck(); // deck object
             deck.Shuffle(3);
 
-            foreach (Card card in deck.Cards)
+            foreach (Card Card in deck.Cards)
             {
-                Console.WriteLine(card.Face + " of " + card.Suit);
+                Console.WriteLine(Card.Face + " of " + Card.Suit);
             }
             Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
-
     }
 }
