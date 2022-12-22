@@ -15,6 +15,7 @@ namespace PolymorphismAssignment
             testEmployee.lastName = "Student"; // last name Student
             testEmployee.SayName(); // call abstract superclass method SayName() on Employee object
 
+            // Using polymorphism to create an object of type IQuittable, calling Quit() method on it.
             IQuittable quitter = new Employee();
             quitter.Quit();
 
