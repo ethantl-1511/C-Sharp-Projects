@@ -20,6 +20,7 @@ namespace TwentyOne
             Console.WriteLine(card); // the card about to be added to the deck ... we print to console
             using (StreamWriter file = new StreamWriter(@"C:\Users\Ethan\Documents\GitHub\C-Sharp-Projects\01 Blackjack Game", true)) // log creation
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
             Deck.Cards.RemoveAt(0); // pass in an index we want to remove ... we remove from deck
