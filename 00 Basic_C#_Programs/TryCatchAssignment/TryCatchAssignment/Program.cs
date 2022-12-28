@@ -12,19 +12,21 @@ namespace TryCatchAssignment
         {
             try
             {
+                int year = DateTime.Now.Year; // current year
                 int age = 1; // age will be 1 by default, we don't want zeroes
-                bool validAnswer = false; // validAnswer will be false
-                while (!validAnswer) // while-loop to do checks, we want positive numbers only.
+
+                bool validNumber = false; // validAnswer will be false
+                while (!validNumber) // while-loop to do checks, we want positive numbers only.
                 {
                     Console.Write("Please input your age: ");
-                    int check = Convert.ToInt32(Console.ReadLine()); // first check, is number above 0?
-                    if (check < 0)
+                    string check = Console.ReadLine(); // gets user input and sets to string
+                    validNumber = int.TryParse(check, out age); // checks if string is a valid number
+                    int number = Convert.ToInt32(check); // convert string to int
+                    if (number < 0) // check if int number is < 0
                     {
                         throw new Exception(); // if it is, throw exception
                     }
-                    validAnswer = int.TryParse(Console.ReadLine(), out age); // now we're checking for digits-only, no strings
-                    if (!validAnswer) throw new Exception(); // if it's anything but a number, throw an exception
-                    Console.WriteLine(DateTime.Now.AddYears(-age)); // otherwise, take the age and subtract it from today's date.
+                    Console.WriteLine(year - age); // otherwise, do math
                 }
             }
             catch (Exception) // general exception
